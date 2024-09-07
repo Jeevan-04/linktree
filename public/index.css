@@ -370,7 +370,7 @@ button#toggle-button:hover {
     /* Ensure the date container is at the top */
     .hindu-date {
         position: static;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         top: 0;
         right: 0;
@@ -378,7 +378,7 @@ button#toggle-button:hover {
     
     /* Main container should follow the date container */
     .container {
-        width: 100%;
+        width: 90%;
         margin-top: 20px;
         border: 2px solid #000;
         min-height: auto;
@@ -388,7 +388,7 @@ button#toggle-button:hover {
     /* Adjust the quote container positioning */
     .quote, .image, .an-marquee, .in-marquee, .game {
         position: static;
-        width: 100%;
+        width: 90%;
         margin: 20px auto;
         border: 2px solid #000;
         padding: 10px;
