@@ -359,3 +359,77 @@ button#toggle-button:hover {
     background: #444;
     cursor: url('./DarkCursor.png'), auto;
 }
+
+@media only screen and (max-width: 768px) {
+    /* Re-arrange the order of the containers */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Ensure the date container is at the top */
+    .hindu-date {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+        top: 0;
+        right: 0;
+    }
+    
+    /* Main container should follow the date container */
+    .container {
+        width: 100%;
+        margin-top: 20px;
+        border: 2px solid #000;
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    /* Adjust the quote container positioning */
+    .quote, .image, .an-marquee, .in-marquee, .game {
+        position: static;
+        width: 100%;
+        margin: 20px auto;
+        border: 2px solid #000;
+        padding: 10px;
+    }
+
+    /* Quote container should fit the mobile view better */
+    .quote {
+        height: auto; /* Allow the height to adjust to the content */
+        overflow: hidden;
+    }
+
+    /* Image container styling */
+    .image {
+        height: auto; /* Let the height adjust automatically */
+    }
+
+    /* Adjust marquee scrolling for mobile */
+    .marquee-content {
+        animation-duration: 20s; /* Speed up for smaller screens */
+    }
+
+    /* Game container styling */
+    .game {
+        height: auto;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Ensure the board is responsive */
+    .board {
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .square {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
