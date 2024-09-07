@@ -419,6 +419,10 @@ button#toggle-button:hover {
         align-items: center;
     }
     
+    .link-box {
+        width: 200px;
+    }
+    
     /* Ensure the board is responsive */
     .board {
         width: 200px;
