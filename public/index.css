@@ -1,0 +1,361 @@
+/* Retro styling */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: url('./LightCursor.png'), auto;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #000;
+    position: relative;
+    min-height: 80vh;
+    margin-top: 60px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #000;
+}
+
+.links {
+    display: flex;
+    flex-direction: column; /* Align links vertically */
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+a, button, input, textarea, select {
+    cursor: url('./LightCursor.png'), auto;
+}
+
+.link-box {
+    background-color: #eee;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 500px; /* Ensure full width within container */
+    transition: background-color 0.3s, color 0.3s;
+    cursor: url('./LightCursor.png'), auto;
+}
+
+.link-box a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 2em;
+}
+
+
+.link-box:hover {
+    background-color: #ddd; /* Light hover background */
+    color: #000; /* Text color on hover */
+}
+
+.hindu-date {
+    margin-top: 40px;
+    line-height: 1.5;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.hindu-date div {
+    margin-bottom: 10px;
+    height: fit-content;
+    width: 350px;
+    font-size: 12px;
+}
+
+.image {
+    margin-top: 600px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #fff; /* Default background color for light mode */
+    padding: 10px;
+    border: 2px solid #000; /* Default border color for light mode */
+    border-radius: 5px;
+    width: 350px;
+    height: 85px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imag {
+    width: 100%;
+    height: 200%;
+    transform: translateY(-30px)
+}
+
+/* Dark mode styles */
+.dark-mode .image {
+    background-color: #555; /* Dark mode background color */
+    border-color: #777; /* Dark mode border color */
+}
+
+.dark-mode .quote {
+    background-color: #555;
+    border-color: #777;
+    color: #f0f0f0;
+}
+
+.quote {
+    margin-top: 105px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 350px;
+    height: 460px; /* Max height */
+    overflow: hidden; /* Hide overflow */
+    display: block;
+    line-height: 1.4;
+    align-content: center;
+}
+
+.sanskrit-text {
+    font-size: 28px; /* Initial larger size for Sanskrit */
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.translation-text {
+    font-size: 16px; /* Initial smaller size for translation */
+    line-height: 1.4;
+}
+
+.dark-mode .an-marquee,
+.dark-mode .in-marquee {
+    background-color: #555;
+    border-color: #777;
+    color: #f0f0f0;
+}
+
+.dark-mode .marquee-content {
+    color: #f0f0f0; /* Text color inside the marquee */
+}
+
+.an-marquee {
+    margin-top: 40px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 350px;
+    height: 30px;
+    overflow: hidden; /* Hide the overflow */
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.in-marquee {
+    margin-top: 655px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 350px;
+    height: 30px;
+    overflow: hidden; /* Hide the overflow */
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite; /* Continuous scroll */
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-right: 50px; /* Adds space between duplicate text */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Start at normal position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move the entire text out of view */
+    }
+}
+
+
+
+.game {
+    margin-top: 160px;
+    line-height: 1.5;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 350px;
+    height: 460px;
+    cursor: url('./LightCursor.png'), auto;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    width: 300px; /* Fixed width for the grid */
+    height: 300px; /* Fixed height for the grid */
+    margin: auto; /* Center the board horizontally */
+    cursor: url('./LightCursor.png'), auto;
+}
+
+.square {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    background: #ddd;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center; /* Center align content vertically */
+    justify-content: center; /* Center align content horizontally */
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    cursor: url('./LightCursor.png'), auto;
+}
+
+
+
+.square.x {
+    background: #cfc;
+}
+
+.square.o {
+    background: #ccf;
+}
+
+.status {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px; /* Adjust font size for the status */
+}
+
+button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    cursor: url('./LightCursor.png'), auto;
+}
+
+button:hover {
+    background: #444;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .container {
+    background: #444;
+    border-color: #666;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .hindu-date {
+    background: #555;
+    border-color: #777;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .game {
+    background: #555;
+    border-color: #777;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .square {
+    background: #555;
+    border-color: #777;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .status {
+    color: #fff;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .link-box {
+    background-color: #555;
+    border-color: #777;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .link-box a {
+    color: #f0f0f0;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+.dark-mode .link-box:hover {
+    background-color: #444; /* Darker background on hover in dark mode */
+    color: #f0f0f0; /* Text color on hover in dark mode */
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+button#toggle-button {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    cursor: url('./DarkCursor.png'), auto;
+}
+
+button#toggle-button:hover {
+    background: #444;
+    cursor: url('./DarkCursor.png'), auto;
+}
