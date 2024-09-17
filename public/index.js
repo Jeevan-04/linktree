@@ -96,22 +96,16 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('toggle-button');
     const body = document.body;
-    const playAgainButton = document.getElementById('play-again');
+    const imageElement = document.querySelector('.imag'); // assuming .imag is the class for the image
 
     // Toggle between dark mode and light mode
     toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDarkMode = body.classList.contains('dark-mode');
+        const isDarkMode = body.classList.toggle('dark-mode');
         localStorage.setItem('dark-mode', isDarkMode);
         toggleButton.textContent = isDarkMode ? '🌕' : '🌙'; // Toggle icon
 
         // Image switching based on the mode
-        const imageElement = document.querySelector('.imag'); // assuming .imag is the class for the image
-        if (isDarkMode) {
-            imageElement.src = './dark.png'; // Change to your dark mode image
-        } else {
-            imageElement.src = './image.png'; // Change to your light mode image
-        }
+        imageElement.src = isDarkMode ? './dark.png' : './image.png'; // Update image source
     });
 
     // Retrieve and set the initial mode from localStorage
@@ -119,9 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedMode) {
         body.classList.add('dark-mode');
         toggleButton.textContent = '🌕'; // Moon icon for dark mode
-        document.querySelector('.imag').src = './dark.png'; // Set initial image for dark mode
+        imageElement.src = './dark.png'; // Set initial image for dark mode
     } else {
-        document.querySelector('.imag').src = './image.png'; // Set initial image for light mode
+        imageElement.src = './image.png'; // Set initial image for light mode
     }
 });
 
